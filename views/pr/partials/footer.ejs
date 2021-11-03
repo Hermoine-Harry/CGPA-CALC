@@ -1,0 +1,45 @@
+<script type="text/javascript">
+//
+function compute(){
+
+var cr =Number(document.getElementById("cr").value);
+var nos =Number(document.getElementById("nos").value);
+var sum = 0;
+var res = 0;
+for (var i = 1; i <=nos ; i++) {
+sum= sum + (Number(document.getElementById("sub"+i).value)*Number(document.getElementById("cre"+i).innerHTML));
+}
+res = sum/cr;
+console.log(sum);
+res=parseFloat(res).toFixed(2);
+document.getElementById("result").innerHTML=res;
+
+
+}
+function compute_cs_4(){
+  var nos =Number(document.getElementById("nos").innerHTML);
+  var sum = 0;
+  var res = 0;
+  sum= sum+(Number(document.getElementById('sub1').value)*Number(document.getElementById('cre1').innerHTML))
+  sum= sum+(Number(document.getElementById('sub2').value)*Number(document.getElementById('cre2').innerHTML))
+  sum= sum+(Number(document.getElementById('sub3').value)*Number(document.getElementById('cre3').innerHTML))
+if(document.getElementById('v5').checked){
+    sum= sum+(Number(document.getElementById('sub4').value)*5)
+    sum= sum+(Number(document.getElementById('sub5').value)*Number(document.getElementById('cre5').innerHTML))
+    res = sum/25;
+    console.log(sum);
+    res=parseFloat(res).toFixed(1);
+    document.getElementById("result").innerHTML=res;
+}
+else if(document.getElementById('v6').checked){
+  sum= sum+(Number(document.getElementById('sub4').value)*6)
+  sum= sum+(Number(document.getElementById('sub5').value)*Number(document.getElementById('cre5').innerHTML))
+  res = sum/26;
+  console.log(sum);
+  res=parseFloat(res).toFixed(1);
+  document.getElementById("result").innerHTML=res;
+}
+}
+</script>
+</body>
+</html>

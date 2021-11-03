@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+i {
+  padding: 5px;
+}
+body {
+  background-color: #EEEEEE;
+  color: #485e74;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1em;
+}
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+.dept-info ul{
+  list-style: none;
+  padding: 30px 30px 0px 30px;
+}
+.logo {
+  width: 60%;
+}
+.logo-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.brand {
+  text-align: center;
+}
+.brand span {
+  color: #00334E;
+}
+.wrapper {
+  box-shadow: 0 0 20px 0 rgba(72, 94, 160 , 0.7);
+  margin: 50px auto 50px auto;
+
+}
+.wrapper > * {
+  padding: 1em;
+}
+.dept-info {
+  background: #145374;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 20px;
+}
+ .dept-info ul {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+.selected-info {
+  background: #f9feff;
+}
+/* /form Styles */
+.selected-info form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+.selected-info form label {
+  display: block;
+}
+.selected-info form p {
+  margin: 0;
+}
+   /* button section */
+.selected-info form select, .selected-info form a {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #c9e6ff;
+}
+.selected-info form a {
+  background: #c9e6ff;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  color: ;
+}
+.selected-info form a:hover, .selected-info form a:focus {
+  background: #145374;
+  color: #fff;
+  outline: 0;
+  transition: background-color 2s ease-out;
+}
+/* 92bde7 */
+.contact-btn {
+  text-decoration: none;
+  color: #fff;
+}
+.contact-btn:hover {
+  color: #ddd;
+}
+/* LARGE SCREEN */
+@media(min-width:700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .wrapper > * {
+    padding: 2em;
+  }
+  .selected-info form a {
+    width: 40%;
+    text-align:center;
+    display: block;
+    margin: 20px auto;;
+    /* justify-content: center; */
+  }
+}
+@media(min-width:480px) {
+  body{
+    font-size: 1.2rem;
+  }
+  #table {
+    font-size: 1.1rem;
+  }
+  .brand {
+    font-size: 4rem;
+  }
+}
+@media(max-width:700px) {
+  .dept-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  .dept-info div {
+    padding-bottom: 0;
+  }
+  .logo-div {
+    padding: 20%;
+    padding-top: 0;
+    display: flex;
+    justify-content: center!important;
+  }
+}

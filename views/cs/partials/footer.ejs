@@ -1,0 +1,160 @@
+<script type="text/javascript">
+//
+function compute(){
+
+var cr =Number(document.getElementById("cr").value);
+var nos =Number(document.getElementById("nos").value);
+var sum = 0;
+var res = 0;
+for (var i = 1; i <=nos ; i++) {
+sum= sum + (Number(document.getElementById("sub"+i).value)*Number(document.getElementById("cre"+i).innerHTML));
+}
+res = sum/cr;
+console.log(sum);
+res=parseFloat(res).toFixed(2);
+document.getElementById("result").innerHTML=res;
+
+
+}
+function compute_cs_4(){
+  var nos =Number(document.getElementById("nos").innerHTML);
+  var sum = 0;
+  var res = 0;
+  sum= sum+(Number(document.getElementById('sub1').value)*Number(document.getElementById('cre1').innerHTML))
+  sum= sum+(Number(document.getElementById('sub2').value)*Number(document.getElementById('cre2').innerHTML))
+  sum= sum+(Number(document.getElementById('sub3').value)*Number(document.getElementById('cre3').innerHTML))
+if(document.getElementById('v5').checked){
+    sum= sum+(Number(document.getElementById('sub4').value)*5)
+    sum= sum+(Number(document.getElementById('sub5').value)*Number(document.getElementById('cre5').innerHTML))
+    res = sum/25;
+    console.log(sum);
+    res=parseFloat(res).toFixed(2);
+    document.getElementById("result").innerHTML=res;
+}
+else if(document.getElementById('v6').checked){
+  sum= sum+(Number(document.getElementById('sub4').value)*6)
+  sum= sum+(Number(document.getElementById('sub5').value)*Number(document.getElementById('cre5').innerHTML))
+  res = sum/26;
+  console.log(sum);
+  res=parseFloat(res).toFixed(1);
+  document.getElementById("result").innerHTML=res;
+}
+}
+function compute_cs_5(){
+  var nos =Number(document.getElementById("nos").innerHTML);
+  var sum = 0;
+  var res = 0;
+  sum= sum+(Number(document.getElementById('sub1').value)*Number(document.getElementById('cre1').innerHTML))
+  sum= sum+(Number(document.getElementById('sub2').value)*Number(document.getElementById('cre2').innerHTML))
+  sum= sum+(Number(document.getElementById('sub3').value)*Number(document.getElementById('cre3').innerHTML))
+  if(document.getElementById('v45').checked){
+    sum= sum+(Number(document.getElementById('sub4').value)*5)
+    if(document.getElementById('v54').checked){
+      sum= sum+(Number(document.getElementById('sub5').value)*4)
+      res = sum/27;
+      console.log(sum);
+      res=parseFloat(res).toFixed(2);
+      document.getElementById("result").innerHTML=res;
+    }
+    else if (document.getElementById('v56').checked) {
+      sum= sum+(Number(document.getElementById('sub5').value)*6)
+      res = sum/29;
+      console.log(sum);
+      res=parseFloat(res).toFixed(2);
+      document.getElementById("result").innerHTML=res;
+    }
+  }
+  else if (document.getElementById('v46').checked) {
+      sum= sum+(Number(document.getElementById('sub4').value)*6)
+      if(document.getElementById('v54').checked){
+        sum= sum+(Number(document.getElementById('sub5').value)*4)
+        res = sum/28;
+        console.log(sum);
+        res=parseFloat(res).toFixed(2);
+        document.getElementById("result").innerHTML=res;
+      }
+      else if (document.getElementById('v56').checked) {
+        sum= sum+(Number(document.getElementById('sub5').value)*6)
+        res = sum/30;
+        console.log(sum);
+        res=parseFloat(res).toFixed(2);
+        document.getElementById("result").innerHTML=res;
+      }
+  }
+
+
+}
+function compute_cs_6(){
+  var nos =Number(document.getElementById("nos").innerHTML);
+  var sum = 0;
+  var res = 0;
+  var tc = 0;
+  if(document.getElementById('v14').checked){
+    tc =4
+    sum= sum+(Number(document.getElementById('sub1').value)*4)
+    if(document.getElementById('v24').checked){
+      tc=tc+4
+        sum= sum+(Number(document.getElementById('sub2').value)*4)
+        if(document.getElementById('v34').checked){
+          tc=tc+4
+          sum= sum+(Number(document.getElementById('sub3').value)*4)
+        }
+        else if (document.getElementById('v36').checked) {
+          tc=tc+6
+          sum= sum+(Number(document.getElementById('sub3').value)*6)
+        }
+    }
+    else if (document.getElementById('v26').checked) {
+      tc=tc+6
+        sum= sum+(Number(document.getElementById('sub2').value)*6)
+        if(document.getElementById('v34').checked){
+          tc=tc+4
+          sum= sum+(Number(document.getElementById('sub3').value)*4)
+        }
+        else if (document.getElementById('v36').checked) {
+          tc=tc+6
+          sum= sum+(Number(document.getElementById('sub3').value)*6)
+        }
+    }
+  }
+  else if (document.getElementById('v16').checked) {
+    tc =6
+    sum= sum+(Number(document.getElementById('sub1').value)*6)
+    if(document.getElementById('v24').checked){
+      tc=tc+4
+        sum= sum+(Number(document.getElementById('sub2').value)*4)
+        if(document.getElementById('v34').checked){
+          tc=tc+4
+          sum= sum+(Number(document.getElementById('sub3').value)*4)
+        }
+        else if (document.getElementById('v36').checked) {
+          tc=tc+6
+          sum= sum+(Number(document.getElementById('sub3').value)*6)
+        }
+    }
+    else if (document.getElementById('v26').checked) {
+      tc=tc+6
+        sum= sum+(Number(document.getElementById('sub2').value)*6)
+        if(document.getElementById('v34').checked){
+          tc=tc+4
+          sum= sum+(Number(document.getElementById('sub3').value)*4)
+        }
+        else if (document.getElementById('v36').checked) {
+          tc=tc+6
+          sum= sum+(Number(document.getElementById('sub3').value)*6)
+        }
+    }
+  }
+  sum= sum+(Number(document.getElementById('sub4').value)*4)
+  sum= sum+(Number(document.getElementById('sub5').value)*3)
+  tc=tc+7
+  res = sum/tc;
+  console.log(sum+""+tc);
+  res=parseFloat(res).toFixed(2);
+  document.getElementById("result").innerHTML=res;
+
+
+}
+</script>
+</body>
+</html>

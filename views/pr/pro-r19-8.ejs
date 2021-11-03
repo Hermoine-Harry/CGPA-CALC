@@ -1,0 +1,97 @@
+<<%- include("partials/header") -%>
+
+
+<div class="container">
+  <div class="back-btn-div">
+      <a href="/index"><i class="fas fa-arrow-circle-left"></i></a>
+      <h1 class="brand"><span>CGPA</span> Calculator</h1>
+  </div>
+  <div class="wrapper">
+    <div class="dept-info">
+      <div class="logo-div">
+        <img src="/css/mit1-logo.png" alt="" class="logo">
+      </div>
+      <div class="logo-title">
+        <ul>
+          <li>Madras Institute of Technology campus,</li>
+          <li>Anna University,</li>
+          <li>Chromepet.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="selected-info">
+      <form >
+        <p>
+          <label>Department</label>
+          <input type="text" name="" value="PRODUCTION TECHNOLOGY" readonly>
+        </p>
+        <p>
+          <label>Regulation</label>
+          <input type="text" name="" value="R2019" readonly>
+        </p>
+        <p>
+          <label>Semester</label>
+          <input type="text" name="" value="VIII" readonly>
+        </p>
+        <p>
+          <label>Total Credits</label>
+          <input type="text" id="cr" name="" value="11" readonly>
+        </p>
+        <p>
+          <label>NO Of Subjects</label>
+          <input type="number" name="" id="nos" value="2" readonly>
+        </p>
+      </form>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<!-- table -->
+<table id="table">
+  <tr>
+    <th>S.No</th>
+    <th>Course Code</th>
+    <th>Course Name</th>
+    <th>Credit</th>
+    <th id="highlight">Grade</th>
+  </tr>
+    <tr>
+      <td>1</td>
+      <td class="null"></td>
+      <td>PROFESSIONAL - ELECTIVE VII</td>
+      <td id="cre1">3</td>
+      <td><form class="" action="/index.html" method="post">
+        <select id="sub1" class="" name="bsl">
+          <option value="10">O</option>
+          <option value="9">A+</option>
+          <option value="8">A</option>
+          <option value="7">B+</option>
+          <option value="6">B</option>
+        </select>
+      </form>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PR5811</td>
+      <td>PROJECT II</td>
+      <td id="cre2" >8</td>
+      <td><form class="" action="/index.html" method="post">
+        <select id="sub2" class="" name="chem">
+          <option value="10">O</option>
+          <option value="9">A+</option>
+          <option value="8">A</option>
+          <option value="7">B+</option>
+          <option value="6">B</option>
+        </select>
+      </form>
+    </tr>
+</table>
+<button onclick="compute()"  name="button" class="button"  id="log" >CALCULATE</button>
+
+<h4 style="text-align: center;">Your GPA :  <span id="result"></span> </h4>
+
+<%- include("partials/footer") -%>
